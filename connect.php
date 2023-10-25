@@ -41,4 +41,6 @@ $c->connectToMySQL();
 $c->connectToPDO();
 ?>
 <?php
-$Connect = mysql_connect("lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "vmfm8w0l9qcbnu9d", "rin92axrzp6dpk5d", "fodpqah8yi80f3no")
+$Connect = mysqli_connect("lcpbq9az4jklobvq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "vmfm8w0l9qcbnu9d", "rin92axrzp6dpk5d", "fodpqah8yi80f3no");
+mysqli_query($Connect,'SET NAMES "utf8"');
+?>
