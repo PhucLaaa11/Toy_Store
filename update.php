@@ -108,7 +108,7 @@ $row = $re->fetch_assoc();
 
     <div class="pt-5">
         <h6 class="mb-0">
-            <a href="home.php" class="text-body text-decoration-none px-5">
+            <a href="index.php" class="text-body text-decoration-none px-5">
                 <i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop
             </a>
         </h6>

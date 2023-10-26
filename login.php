@@ -30,7 +30,7 @@ if (isset($_POST['btnLogin'])) {
             echo "Login successfully";
             setcookie("cc_username", $row['username'], time() + 3600);
             // setcookie("cc_id", $row['id'], time()+3600);
-            header("Location: home.php");
+            header("Location: index.php");
         } else {
             echo "Something wrong with your info<br>";
         }

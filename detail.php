@@ -74,7 +74,7 @@ if (isset($_COOKIE['cc_username'])) {
                 </form>
                 <div class="pt-2">
                     <h6 class="mb-3">
-                        <a href="home.php" class="text-body text-decoration-none px-5">
+                        <a href="index.php" class="text-body text-decoration-none px-5">
                             <i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop
                         </a>
                     </h6>
@@ -85,7 +85,7 @@ if (isset($_COOKIE['cc_username'])) {
                 <h2>Nothing to show</h2>
                 <div class="pt-5">
                     <h6 class="mb-0">
-                        <a href="home.php" class="text-body text-decoration-none px-5">
+                        <a href="index.php" class="text-body text-decoration-none px-5">
                             <i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop
                         </a>
                     </h6>
