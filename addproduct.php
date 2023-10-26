@@ -49,7 +49,7 @@ if (isset($_COOKIE['cc_username'])) {
 <div class="container">
     <h2>Product Add</h2>
 
-    <form class="form form-vertical" method="POST" action="#" enctype="multipart/form-data">
+    <form action="#" class="form form-vertical" method="POST" enctype="multipart/form-data">
 
         <div class="row mb-3">
             <div class="col-12">
