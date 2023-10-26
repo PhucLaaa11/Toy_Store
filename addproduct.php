@@ -51,6 +51,7 @@ if (isset($_COOKIE['cc_username'])) {
 
     <form action="#" class="form form-vertical" method="POST" enctype="multipart/form-data">
 
+        <!--Product ID-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="proId" class="col-sm-2">Product ID</label>
@@ -60,6 +61,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Product Name-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="proName" class="col-sm-2">Product Name</label>
@@ -69,6 +71,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Price-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="price" class="col-sm-2">Price</label>
@@ -78,6 +81,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Product Description-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="ProDe" class="col-sm-2">Product Description</label>
@@ -87,6 +91,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Product Date-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="importDate" class="col-sm-2">Product Date</label>
@@ -96,6 +101,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Quantity-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="quan" class="col-sm-2">Quantity</label>
@@ -105,6 +111,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Image-->
         <div class="row mb-3">
             <div class="col-12">
                 <div class="form-group">
@@ -116,6 +123,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Cat ID-->
         <div class="row mb-3">
             <div class="col-12">
                 <label for="catId" class="col-sm-2">Cat Id</label>
@@ -128,6 +136,7 @@ if (isset($_COOKIE['cc_username'])) {
             </div>
         </div>
 
+        <!--Button-->
         <div class="row mb-3">
             <div class="col-2 ms-auto row">
                 <div class="col-6 d-grid mx-auto">
