@@ -119,9 +119,12 @@ if (isset($_COOKIE['cc_username'])) {
         <div class="row mb-3">
             <div class="col-12">
                 <label for="catId" class="col-sm-2">Cat Id</label>
-                <div class="col-sm-10">
-                    <input id="catId" type="text" name="catId" class="form-control" placeholder="Cat Id" value="">
-                </div>
+                <select name="catId" id="catId" class="form-select">
+                    <option selected>Product Category</option>
+                    <option value="1">Lego</option>
+                    <option value="2">Figure</option>
+                    <option value="3">Board game</option>
+                </select>
             </div>
         </div>
 
