@@ -25,12 +25,12 @@ if (isset($_COOKIE['cc_username'])) {
         );
 
         if ($flag) {
-            $sql = "INSERT INTO `product`(`pid`,`pname`, `pprice`, `pquan`, `pdesc`, `pimage`, `pdate`, `catid`) VALUES (?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO `product`(`pid`,`pname`, `pprice`, `pdesc`, `pquan`, `pdate`, `pimage`,  `catid`) VALUES (?,?,?,?,?,?,?)";
             //$re = $dbLink->prepare($sql);
             //$v = [$name, $price, $quan, $desc, $img, $date, $cat];
             $re = $dbLink->prepare($sql);
             $valueArray = [
-                "$id", "$name", "$price", "$desc", "$img", "$importDate", "$cat"
+                "$id", "$name", "$price", "$desc", "$img", "$importDate", "$quan", "$cat"
             ];
 
             $stmt = $re->execute($valueArray);

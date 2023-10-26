@@ -32,7 +32,7 @@
         <div class="container-fluid">
             <a href="index.php">
                 <img src="img/OIP.jpg" width="50px" title="Homepage">
-                <class="navbar-brand">Toys Kingdom</a>
+                <class="navbar-brand">ATN STORE</a>
 
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navsup">
                 <span class="navbar-toggler-icon"></span>
@@ -76,7 +76,7 @@
     <section class="py-lg-5 text-center container" style="background-image:url(img/backgr.jpg)" height: 600px>
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">Toys Kingdom</h1>
+                <h1 class="fw-light">ATN Store</h1>
                 <p class="lead text-muted">Explore your creativity!</p>
             </div>
         </div>
