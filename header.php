@@ -30,7 +30,7 @@
     <!-- navbar-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href="home.php">
+            <a href="index.php">
                 <img src="img/OIP.jpg" width="50px" title="Homepage">
                 <class="navbar-brand">Toys Kingdom</a>
 
