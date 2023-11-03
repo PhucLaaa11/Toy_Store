@@ -15,6 +15,7 @@ if (isset($_COOKIE['cc_username'])) {
         $importDate = date('Y-m-d', strtotime($_POST['importDate']));
         $quan = $_POST['quan'];
         $cat = $_POST['catId'];
+        $store = $_POST['storeId'];
 
         $img = str_replace(' ', '-', $_FILES['Pro_image']['name']);
         //Duong dan
@@ -25,17 +26,17 @@ if (isset($_COOKIE['cc_username'])) {
         );
 
         if ($flag) {
-            $sql = "INSERT INTO `product`(`pid`, `pname`, `pprice`, `pdesc`, `pquan`, `pdate`, `pimage`, `catid`) VALUES (?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO `product`(`pid`, `pname`, `pprice`, `pdesc`, `pquan`, `pdate`, `pimage`, `catid`, `sid`) VALUES (?,?,?,?,?,?,?,?,?)";
             //$re = $dbLink->prepare($sql);
             //$v = [$name, $price, $quan, $desc, $img, $date, $cat];
             $re = $dbLink->prepare($sql);
             $valueArray = [
-                "$id", "$name", "$price", "$desc", "$quan", "$importDate", "$img" , "$cat"
+                "$id", "$name", "$price", "$desc", "$quan", "$importDate", "$img", "$cat", "$store"
             ];
 
             $stmt = $re->execute($valueArray);
             if ($stmt) {
-                echo "Congrat!";
+                echo "Congrats!";
             }
         } else {
             echo "Failed!";
@@ -132,6 +133,19 @@ if (isset($_COOKIE['cc_username'])) {
                     <option value="1">Lego</option>
                     <option value="2">Figure</option>
                     <option value="3">Board game</option>
+                </select>
+            </div>
+        </div>
+
+        <!--Store ID-->
+        <div class="row mb-3">
+            <div class="col-12">
+                <label for="storeId" class="col-sm-2">Store Id</label>
+                <select name="storeId" id="storeId" class="form-select">
+                    <option selected>Store Category</option>
+                    <option value="1">ATN at 30/4 Street, Ninh Kieu District, Can Tho</option>
+                    <option value="2">ATN at 33-35 D4, Tan Hung, 7 District, HCM</option>
+                    <option value="3">ATN at 206G Doi Can, Ba Dinh District, Ha Noi</option>
                 </select>
             </div>
         </div>

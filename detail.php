@@ -31,10 +31,10 @@ if (isset($_COOKIE['cc_username'])) {
     <?php
     if (isset($_GET['id'])) :
         $pid = $_GET['id'];
-        require_once 'connect.php';
         $conn = new Connect();
         $db_link = $conn->connectToPDO();
-        $sql = "select * from product where pid = ?";
+        $sql = "select * from product where pid=?";
+        //$sql = "SELECT * FROM product p, store s, category c WHERE c.cid = p.catid AND p.sid = s.sid AND p.pid=?";
         $stmt = $db_link->prepare($sql);
         $stmt->execute(array($pid));
         $re = $stmt->fetch(PDO::FETCH_BOTH);
@@ -53,7 +53,7 @@ if (isset($_COOKIE['cc_username'])) {
                         <br>
                         Quantity: <?= $re['pquan'] ?>
                         <br>
-                        Description: <?= $re['pdesc'] ?></span>
+                        Description: <?= $re['pdesc'] ?>
                     </h6>
                 </div>
 
@@ -66,9 +66,6 @@ if (isset($_COOKIE['cc_username'])) {
                         <button type="submit" name="btnDelete" class="btn btn-danger my-3 mx-auto">
                             <a href="?del_id=<?= $re['pid'] ?>" class="text-decoration-none text-white">Delete
                                 <i class="fa-solid fa-trash"></i></a>
-                        </button>
-                        <button type="submit" name="btnAddToCart" class="btn btn-warning my-3">
-                            <a href="cart.php?id=<?= $re['pid'] ?>" class="text-decoration-none text-black">Add to cart<i class="fas fa-shopping-cart"></i></a>
                         </button>
                     </div>
                 </form>

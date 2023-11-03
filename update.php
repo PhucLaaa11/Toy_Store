@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $price = $_POST['price'];
     $importDate = date('Y-m-d', strtotime($_POST['importDate']));
     $cat = $_POST['catId'];
+    $store = $_POST['storeId'];
     $img = $_POST['img'];
 
     $sql = "UPDATE product SET 
@@ -18,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             pprice = '$price',
             pdate = '$importDate',
             catid = '$cat',
+            sid = '$store',
             pimage = '$img'
             WHERE pid = $proId";
 
@@ -29,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $pro_id = $_GET['id'];
-$sql = "SELECT * FROM product p, category c WHERE p.catid = c.cid  AND pid ='$pro_id'";
+$sql = "SELECT * FROM product p, store s, category c WHERE p.catid = c.cid AND p.sid = s.sid  AND pid ='$pro_id'";
 $re = $blink->query($sql);
 $row = $re->fetch_assoc();
 
@@ -83,6 +85,20 @@ $row = $re->fetch_assoc();
                 <label for="importDate" class="col-sm-2" style="font-weight: bold; color:cornflowerblue">Import
                     date</label>
                 <input type="date" id="importDate" name="importDate" class="form-control" value="<?= $row['pdate'] ?>" placeholder="Import date" required>
+            </div>
+        </div>
+
+        <!-- Store Id  -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <label for="storeId" class="col-sm-2" style="font-weight: bold; color:cornflowerblue">Store
+                    Id</label>
+                <select name="storeId" id="storeId" class="form-select">
+                    <option selected value="<?= $row['sid'] ?>"><?= $row['sname'] ?></option>
+                    <option value="1">ATN at 30/4 Street, Ninh Kieu District, Can Tho.</option>
+                    <option value="2">ATN at 33-35 D4, Tan Hung, 7 District, HCM.</option>
+                    <option value="3">ATN at 206G Doi Can, Ba Dinh District, Ha Noi.</option>
+                </select>
             </div>
         </div>
 
