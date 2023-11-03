@@ -9,6 +9,10 @@ class Connect{
         $this->username = "fc4lmdkfenpgroaav";
         $this->password = "zzbuen4c3ihcedxs";
         $this->dbName= "ktom750ot6hzt00r";
+        //$this->server = "localhost";
+       //$this->username = "root";
+        //$this->password = "";
+        //$this->dbName= "";
     }
 
     // Option 1: mysqli
