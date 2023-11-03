@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $pro_id = $_GET['id'];
-$sql = "SELECT * FROM product p, store s, category c WHERE p.catid = c.cid AND p.sid = s.sid  AND pid ='$pro_id'";
+$sql = "SELECT * FROM product p, category c WHERE p.catid = c.cid  AND pid ='$pro_id'";
 $re = $blink->query($sql);
 $row = $re->fetch_assoc();
 
